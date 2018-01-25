@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CollapsableCard from "./CollapsableCard";
 import SearchIcon from "../../../common/icons/SearchIcon";
 import StarIcon from "../../../common/icons/StarIcon";
-
+import RatingFilter from "./RatingFilter";
 const AsideContainer = styled.div`
 	width: 300px;
 `;

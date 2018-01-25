@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Container = styled.div`
 	display: flex;
 	justify-content: flex-start;
-	margin: 10px 0;
+	margin: 6px 0;
 `;
 
 const StarRating = ({ rating }) => (
