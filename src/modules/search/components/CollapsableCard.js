@@ -8,7 +8,7 @@ const color = "#1f64a4";
 const Container = styled.div`
 	background-color: white;
 	padding: 10px;
-	margin: 10px 0;
+	margin: 5px 0;
 `;
 
 const Header = styled.header`
@@ -16,7 +16,7 @@ const Header = styled.header`
 	align-items: center;
 	justify-content: space-between;
 	color: ${color};
-	margin-bottom: 10px;
+	margin-bottom: 18px;
 `;
 
 const Tittle = styled.div`

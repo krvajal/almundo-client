@@ -4,15 +4,19 @@ import CollapsableCard from "./CollapsableCard";
 import SearchIcon from "../../../common/icons/SearchIcon";
 import StarIcon from "../../../common/icons/StarIcon";
 import RatingFilter from "./RatingFilter";
+import NameFilter from "./NameFilter";
+
 const AsideContainer = styled.div`
 	width: 300px;
 `;
+
 const Title = styled.h2`
 	background-color: white;
 	padding: 10px;
 	font-size: 14px;
 	color: black;
 	text-align: left;
+	margin: 0;
 `;
 
 const color = "#1f64a4";
@@ -23,7 +27,7 @@ const SearchSidebar = props => (
 			title={"Nombre del hotel"}
 			icon={<SearchIcon fill={color} width={18} heigh={18} />}
 		>
-			<div> lorem </div>
+			<NameFilter />
 		</CollapsableCard>
 		<CollapsableCard
 			title={"Estrellas"}
