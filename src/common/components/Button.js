@@ -11,6 +11,8 @@ const Button = ({ title }) => {
 		background: #163474;
 		margin: 0 10px;
 		border: none;
+		width: 100%;
+		cursor: pointer;
 	`;
 
 	return <StyledButton> {title}</StyledButton>;
