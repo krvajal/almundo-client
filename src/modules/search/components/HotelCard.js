@@ -3,8 +3,8 @@ import styled from "styled-components";
 import StarRating from "../../../common/components/StarRating";
 import Price from "./Price";
 import Button from "../../../common/components/Button";
-import { MEDIA_QUERIES } from "../../../common/constants";
 import AmenitiesIcons from "../../../common/components/AmenitiesIcons";
+import { MEDIA_QUERIES } from "../../../common/constants";
 
 const color = "#1f64a4";
 
@@ -28,7 +28,7 @@ const Card = styled.div`
 	margin-bottom: 10px;
 	align-items: center;
 	display: flex;
-	@media (max-width: ${MEDIA_QUERIES.tablet}) {
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		flex-direction: column;
 		align-items: stretch;
 	}
@@ -39,7 +39,7 @@ const Thumbnail = styled.div`
 	background: url(${props => props.src});
 	background-size: cover;
 	background-repeat: no-repeat;
-	@media (max-width: ${MEDIA_QUERIES.tablet}) {
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		width: 100%;
 		height: 200px;
 	}
@@ -55,12 +55,12 @@ const PriceContainer = styled.div`
 	display: flex;
 	flex-flow: column;
 	align-items: center;
-	@media (min-width: ${MEDIA_QUERIES.tablet}) {
-		width: 200px;
+	@media (min-width: ${MEDIA_QUERIES.SMALL}) {
+		max-width: 200px;
 		padding-left: 10px;
 		border-left: 2px dashed #f1f1f1;
 	}
-	@media (max-width: ${MEDIA_QUERIES.tablet}) {
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		padding-top: 10px;
 		margin-top: 20px;
 		border-top: 2px dashed black;

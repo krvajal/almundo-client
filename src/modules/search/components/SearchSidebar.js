@@ -11,9 +11,9 @@ const AsideContainer = styled.div`
 	max-width: 300px;
 	width: 100%;
 	margin: 0 10px;
-	@media (max-width: ${MEDIA_QUERIES.tablet}) {
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		margin: 0;
-		max-width: 500px;
+		max-width: 100%;
 	}
 `;
 
@@ -24,6 +24,8 @@ const Title = styled.h2`
 	color: black;
 	text-align: left;
 	margin: 0;
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
+	}
 `;
 
 const color = "#1f64a4";

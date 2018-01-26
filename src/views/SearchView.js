@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { SearchSidebar } from "../modules/search";
 import { HotelList } from "../modules/search";
 import api from "../common/api";
+import { MEDIA_QUERIES } from "../common/constants";
 
 const Container = styled.div`
 	margin: 20px auto;
@@ -10,7 +11,7 @@ const Container = styled.div`
 	width: 100%;
 	max-width: 1024px;
 
-	@media (max-width: 500px) {
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		flex-direction: column;
 	}
 `;
