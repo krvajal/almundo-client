@@ -1,5 +1,5 @@
 export const MEDIA_QUERIES = {
-	SMALL: "700px"
+	SMALL: "950px"
 };
 export const COLORS = {
 	PRIMARY: "#163474",

@@ -11,7 +11,9 @@ const Container = styled.div`
 	display: flex;
 	width: 100%;
 	max-width: 1024px;
-
+	> * {
+		margin: 0 10px;
+	}
 	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		flex-direction: column;
 		margin: 0;
@@ -22,18 +24,20 @@ class SearchView extends Component {
 		this.props.dispatch(actions.fetchHotels());
 	}
 	render() {
-		const { hotels } = this.props;
+		const { hotels, loading } = this.props;
 		return (
 			<Container>
 				<SearchSidebar />
-				<HotelList hotels={hotels} />
+				{loading && <div> Cargando ... </div>}
+				{!loading && <HotelList hotels={hotels} />}
 			</Container>
 		);
 	}
 }
 
 const mapStateToProps = state => ({
-	hotels: state.hotels
+	hotels: state.hotels.items,
+	loading: !state.hotels.loaded
 });
 
 export default connect(mapStateToProps)(SearchView);

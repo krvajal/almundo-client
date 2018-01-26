@@ -41,7 +41,7 @@ const BodyContainer = styled.div`
 
 class CollapsableCard extends Component {
 	state = {
-		collapsed: false
+		collapsed: true
 	};
 	render() {
 		const content = !this.state.collapsed ? this.props.children : null;

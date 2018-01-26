@@ -1,6 +1,9 @@
 import api from "../api";
 
 export const getHotels = (dispatch, filters) => {
+	dispatch({
+		type: "HOTELS_FETCH_START"
+	});
 	api
 		.getHotels(filters)
 		.then(hotels => {
