@@ -11,7 +11,7 @@ const Container = styled.div`
 const StarRating = ({ rating }) => (
 	<Container>
 		{range(1, rating + 1).map(item => (
-			<StarIcon fill="#f5ae27" width={16} height={16} />
+			<StarIcon key={item} fill="#f5ae27" width={16} height={16} />
 		))}
 	</Container>
 );

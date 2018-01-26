@@ -3,9 +3,9 @@ import HotelCard from "./HotelCard";
 import styled from "styled-components";
 
 const Container = styled.div`
-	width: 100%;
+	flex-grow: 1;
 	max-width: 900px;
-	margin: 0 20px;
+	margin: 0;
 `;
 const List = styled.ul`
 	display: flex;

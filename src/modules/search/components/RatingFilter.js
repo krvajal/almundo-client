@@ -14,7 +14,7 @@ const RatingFilter = props => (
 			<input type="checkbox" /> Todas las estrellas
 		</FilterRow>
 		{range(1, 6).map(rating => (
-			<FilterRow>
+			<FilterRow key={rating}>
 				<input type="checkbox" />
 				<StarRating rating={rating} />
 			</FilterRow>

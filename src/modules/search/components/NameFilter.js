@@ -13,10 +13,16 @@ const Input = styled.input`
 	font-size: 14px;
 `;
 
+const SearchButtonContainer = styled.div`
+	max-width: 150px;
+	margin: 0 10px;
+`;
+
 const NameFilter = props => (
 	<form>
 		<FilterRow>
 			<Input type="text" placeholder="Ingrese el nombre del hotel" />
+
 			<Button title={"Aceptar"} />
 		</FilterRow>
 	</form>

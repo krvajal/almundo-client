@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Button = ({ title }) => {
 	const StyledButton = styled.button`
-		height: 30px;
+		height: 35px;
 		padding: 0 10px;
 		color: white;
 		font-size: 16px;
@@ -12,6 +12,7 @@ const Button = ({ title }) => {
 		margin: 0 10px;
 		border: none;
 		width: 100%;
+		border-radius: 4px;
 		cursor: pointer;
 	`;
 

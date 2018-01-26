@@ -3,11 +3,18 @@ import styled from "styled-components";
 import CollapsableCard from "./CollapsableCard";
 import SearchIcon from "../../../common/icons/SearchIcon";
 import StarIcon from "../../../common/icons/StarIcon";
+import { MEDIA_QUERIES } from "../../../common/constants";
 import RatingFilter from "./RatingFilter";
 import NameFilter from "./NameFilter";
 
 const AsideContainer = styled.div`
-	width: 300px;
+	max-width: 300px;
+	width: 100%;
+	margin: 0 10px;
+	@media (max-width: ${MEDIA_QUERIES.tablet}) {
+		margin: 0;
+		max-width: 500px;
+	}
 `;
 
 const Title = styled.h2`
