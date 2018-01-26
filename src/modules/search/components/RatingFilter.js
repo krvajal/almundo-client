@@ -15,7 +15,11 @@ const FilterRow = styled.div`
 	align-items: center;
 `;
 
-const RatingFilter = ({ selectedRatings, toggleRating, clearRating }) => (
+export const RatingFilter = ({
+	selectedRatings,
+	toggleRating,
+	clearRating
+}) => (
 	<Container>
 		<FilterRow>
 			<input

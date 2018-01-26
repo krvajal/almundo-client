@@ -14,7 +14,7 @@ const List = styled.ul`
 	margin: 0;
 `;
 
-const HotelList = ({ hotels }) => {
+export const HotelList = ({ hotels }) => {
 	return (
 		<Container>
 			<List>
