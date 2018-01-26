@@ -10,3 +10,13 @@ export const toggleRating = rating => {
 		getHotels(dispatch, filters);
 	};
 };
+
+export const clearRatings = () => {
+	return (dispatch, getState) => {
+		dispatch({
+			type: "CLEAR_RATING"
+		});
+		const { filters } = getState();
+		getHotels(dispatch, filters);
+	};
+};

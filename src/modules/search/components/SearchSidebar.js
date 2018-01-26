@@ -6,6 +6,7 @@ import StarIcon from "../../../common/icons/StarIcon";
 import { MEDIA_QUERIES, COLORS } from "../../../common/constants";
 import RatingFilter from "./RatingFilter";
 import NameFilter from "./NameFilter";
+import Media from "react-media";
 
 const AsideContainer = styled.div`
 	max-width: 300px;
@@ -30,7 +31,8 @@ const Title = styled.h2`
 `;
 
 const color = "#1f64a4";
-const SearchSidebar = props => (
+
+const DesktopSearchSidebar = props => (
 	<AsideContainer>
 		<Title> Filtros </Title>
 		<CollapsableCard
@@ -46,5 +48,19 @@ const SearchSidebar = props => (
 			<RatingFilter />
 		</CollapsableCard>
 	</AsideContainer>
+);
+
+const MobileSearchSidebar = props => (
+	<CollapsableCard title={"Filtrar"}>
+		<NameFilter />
+		<RatingFilter />
+	</CollapsableCard>
+);
+const SearchSidebar = props => (
+	<Media query={`(min-width: ${MEDIA_QUERIES.SMALL})`}>
+		{matches =>
+			matches ? <DesktopSearchSidebar /> : <MobileSearchSidebar />
+		}
+	</Media>
 );
 export default SearchSidebar;

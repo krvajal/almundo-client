@@ -4,9 +4,7 @@ import StarRating from "../../../common/components/StarRating";
 import Price from "./Price";
 import Button from "../../../common/components/Button";
 import AmenitiesIcons from "../../../common/components/AmenitiesIcons";
-import { MEDIA_QUERIES } from "../../../common/constants";
-
-const color = "#1f64a4";
+import { MEDIA_QUERIES, COLORS } from "../../../common/constants";
 
 const DetailButton = styled.button`
 	height: 35px;
@@ -58,19 +56,20 @@ const PriceContainer = styled.div`
 	flex-flow: column;
 	align-items: center;
 	@media (min-width: ${MEDIA_QUERIES.SMALL}) {
-		max-width: 200px;
-		padding-left: 10px;
-		border-left: 2px dashed #f1f1f1;
+		width: 200px;
+		min-width: 200px;
+		padding-left: 30px;
+		border-left: 2px dashed #c1c1c1;
 	}
 	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		padding-top: 10px;
 		margin-top: 20px;
-		border-top: 2px dashed black;
+		border-top: 2px dashed #646464;
 	}
 `;
 const HotelName = styled.h4`
 	margin: 4px 0;
-	color: ${color};
+	color: ${COLORS.PRIMARY_LIGHT};
 	font-size: 14px;
 	text-align: left;
 `;

@@ -1,4 +1,5 @@
 import { fetchHotels } from "./hotels";
-import { toggleRating } from "./rating";
+import { toggleRating, clearRatings } from "./rating";
+import { search } from "./search";
 
-export default { fetchHotels, toggleRating };
+export default { fetchHotels, toggleRating, clearRatings, search };

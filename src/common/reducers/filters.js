@@ -1,13 +1,13 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from "redux";
 
-const searchTerm = (state ='', action) => {
-	switch(action.type) {
+const searchTerm = (state = "", action) => {
+	switch (action.type) {
 		case "SET_SEARCH_TERM":
 			return action.payload;
 		default:
-		return state;
+			return state;
 	}
-}
+};
 
 const ratings = (state = [], action) => {
 	switch (action.type) {
@@ -23,9 +23,7 @@ const ratings = (state = [], action) => {
 	}
 };
 
-
 export default combineReducers({
-	searchTerm
+	searchTerm,
 	ratings
-})
-
+});

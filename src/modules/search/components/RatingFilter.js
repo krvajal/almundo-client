@@ -6,13 +6,17 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import actions from "../../../common/actions";
 
+const Container = styled.div`
+	margin: 10px 0;
+`;
+
 const FilterRow = styled.div`
 	display: flex;
 	align-items: center;
 `;
 
 const RatingFilter = ({ selectedRatings, toggleRating, clearRating }) => (
-	<div>
+	<Container>
 		<FilterRow>
 			<input
 				type="checkbox"
@@ -31,7 +35,7 @@ const RatingFilter = ({ selectedRatings, toggleRating, clearRating }) => (
 				<StarRating rating={rating} />
 			</FilterRow>
 		))}
-	</div>
+	</Container>
 );
 RatingFilter.propTypes = {
 	selectedRatings: PropTypes.array.isRequired,
@@ -39,14 +43,15 @@ RatingFilter.propTypes = {
 };
 
 const mapStateToProps = state => ({
-	selectedRatings: state.ratings
+	selectedRatings: state.filters.ratings
 });
 const mapDispatchToProps = dispatch => ({
-	toggleRating: rating => dispatch(actions.toggleRating(rating)),
-	clearRating: () =>
-		dispatch({
-			type: "CLEAR_RATING"
-		})
+	toggleRating(rating) {
+		dispatch(actions.toggleRating(rating));
+	},
+	clearRating() {
+		dispatch(actions.clearRatings());
+	}
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(RatingFilter);

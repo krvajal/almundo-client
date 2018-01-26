@@ -2,21 +2,27 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import Toogle from "./Toggle";
-
+import { MEDIA_QUERIES, COLORS } from "../../../common/constants";
 const color = "#1f64a4";
 
 const Container = styled.div`
 	background-color: white;
 	padding: 10px;
 	margin: 5px 0;
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
+		margin: 0;
+	}
 `;
 
 const Header = styled.header`
 	display: flex;
+	width: 100%;
 	align-items: center;
 	justify-content: space-between;
 	color: ${color};
-	margin-bottom: 18px;
+	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
+		justify-content: center;
+	}
 `;
 
 const Tittle = styled.div`
@@ -29,6 +35,10 @@ const IconContainer = styled.div`
 	height: 20px;
 	margin-right: 10px;
 `;
+const BodyContainer = styled.div`
+	margin-top: 10px;
+`;
+
 class CollapsableCard extends Component {
 	state = {
 		collapsed: false
@@ -47,7 +57,9 @@ class CollapsableCard extends Component {
 						onChange={this.handleToggle}
 					/>
 				</Header>
-				{content}
+				{!this.state.collapsed && (
+					<BodyContainer>{content}</BodyContainer>
+				)}
 			</Container>
 		);
 	}

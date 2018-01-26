@@ -1,6 +1,6 @@
 import api from "../api";
 
-export const getHotels = (dispatch, rating) => {
+export const getHotels = (dispatch, filters) => {
 	api
 		.getHotels(filters)
 		.then(hotels => {
@@ -11,7 +11,7 @@ export const getHotels = (dispatch, rating) => {
 		})
 		.catch(err => {
 			dispatch({
-				type: "HOTELS_FETCH_FAILURE",
+				type: "HOTELS_FETCH_FAIL",
 				payload: err
 			});
 		});
