@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import { SearchSidebar } from "../modules/search";
 import { HotelList } from "../modules/search";
-import api from "../common/api";
+import { connect } from "react-redux";
+import actions from "../common/actions";
 import { MEDIA_QUERIES } from "../common/constants";
 
 const Container = styled.div`
@@ -13,20 +14,15 @@ const Container = styled.div`
 
 	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		flex-direction: column;
+		margin: 0;
 	}
 `;
 class SearchView extends Component {
-	state = {
-		hotels: []
-	};
 	componentDidMount() {
-		api.getHotels().then(hotels => {
-			console.log({ hotels });
-			this.setState({ hotels });
-		});
+		this.props.dispatch(actions.fetchHotels());
 	}
 	render() {
-		const { hotels } = this.state;
+		const { hotels } = this.props;
 		return (
 			<Container>
 				<SearchSidebar />
@@ -36,4 +32,8 @@ class SearchView extends Component {
 	}
 }
 
-export default SearchView;
+const mapStateToProps = state => ({
+	hotels: state.hotels
+});
+
+export default connect(mapStateToProps)(SearchView);

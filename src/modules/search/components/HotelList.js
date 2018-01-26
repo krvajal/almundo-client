@@ -23,4 +23,5 @@ const HotelList = ({ hotels }) => {
 		</Container>
 	);
 };
+
 export default HotelList;

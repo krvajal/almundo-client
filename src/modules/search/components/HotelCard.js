@@ -31,10 +31,12 @@ const Card = styled.div`
 	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
 		flex-direction: column;
 		align-items: stretch;
+		margin: 10px;
 	}
 `;
 const Thumbnail = styled.div`
 	width: 200px;
+	min-width: 200px;
 	height: 137px;
 	background: url(${props => props.src});
 	background-size: cover;

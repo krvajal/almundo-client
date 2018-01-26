@@ -3,6 +3,6 @@ export const MEDIA_QUERIES = {
 };
 export const COLORS = {
 	PRIMARY: "#163474",
-	PRIMARY_LIGHT: "#1f64a4"
+	PRIMARY_LIGHT: "#1f64a4",
 	SECONDARY: "#d75322"
-}
+};

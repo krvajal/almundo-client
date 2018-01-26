@@ -3,7 +3,7 @@ import styled from "styled-components";
 import CollapsableCard from "./CollapsableCard";
 import SearchIcon from "../../../common/icons/SearchIcon";
 import StarIcon from "../../../common/icons/StarIcon";
-import { MEDIA_QUERIES } from "../../../common/constants";
+import { MEDIA_QUERIES, COLORS } from "../../../common/constants";
 import RatingFilter from "./RatingFilter";
 import NameFilter from "./NameFilter";
 
@@ -25,6 +25,7 @@ const Title = styled.h2`
 	text-align: left;
 	margin: 0;
 	@media (max-width: ${MEDIA_QUERIES.SMALL}) {
+		color: ${COLORS.PRIMARY_LIGHT};
 	}
 `;
 
