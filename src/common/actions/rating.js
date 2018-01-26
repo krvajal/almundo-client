@@ -6,7 +6,7 @@ export const toggleRating = rating => {
 			type: "TOGGLE_RATING",
 			payload: rating
 		});
-		const { ratings } = getState();
-		getHotels(dispatch, ratings);
+		const { filters } = getState();
+		getHotels(dispatch, filters);
 	};
 };
