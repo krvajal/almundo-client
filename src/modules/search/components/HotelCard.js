@@ -5,6 +5,7 @@ import Price from "./Price";
 import Button from "../../../common/components/Button";
 import AmenitiesIcons from "../../../common/components/AmenitiesIcons";
 import { MEDIA_QUERIES, COLORS } from "../../../common/constants";
+import PropTypes from "prop-types";
 
 const DetailButton = styled.button`
 	height: 35px;
@@ -101,5 +102,13 @@ const HotelCard = ({ name, stars, price, amenities, image }) => (
 		</PriceContainer>
 	</Card>
 );
+
+HotelCard.propTypes = {
+	name: PropTypes.string.isRequired,
+	stars: PropTypes.number.isRequired,
+	price: PropTypes.number.isRequired,
+	amenities: PropTypes.array.isRequired,
+	image: PropTypes.string.isRequired
+};
 
 export default HotelCard;
